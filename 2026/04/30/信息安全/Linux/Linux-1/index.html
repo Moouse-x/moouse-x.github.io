@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <title>Hexo</title>
+  <meta name="description" content="linux-1Linux基础命令#linux命令 ls +[-al] +[dir ] pwd 打印当前所属的目录的路径 cd    cd .. 切换到上级目录    cd ~切换到home目录    cd &#x2F;usr&#x2F;local 切换具体目录    cd app 切换到app目录    cd &#x2F;切换到根目录    cd - 回退上一个命令 touch 1.txt   -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/Linux/Linux-1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="linux-1Linux基础命令#linux命令 ls +[-al] +[dir ] pwd 打印当前所属的目录的路径 cd    cd .. 切换到上级目录    cd ~切换到home目录    cd &#x2F;usr&#x2F;local 切换具体目录    cd app 切换到app目录    cd &#x2F;切换到根目录    cd - 回退上一个命令 touch 1.txt   -">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-04-30T05:37:45.330Z">
+<meta property="article:modified_time" content="2025-12-18T06:27:05.154Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  <link rel="icon" href="/images/logo.svg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-regular/result.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-medium/result.css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+  <div class="header-inner">
+    <a class="site-title" href="/"><img class="site-logo" src="/images/logo.svg" alt="Logo">Hexo</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle-icon"></span>
+    </button>
+    <nav class="site-nav">
+      
+        <a class="nav-link" href="/">Home</a>
+      
+        <a class="nav-link" href="/archives">Archives</a>
+      
+        <a class="nav-link" href="/tags">Tags</a>
+      
+        <a class="nav-link" href="/categories">Categories</a>
+      
+        <a class="nav-link" href="/about">About</a>
+      
+    </nav>
+  </div>
+</header>
+
+    <main class="main-content">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+    <div class="post-meta">
+      <time datetime="2026-04-30T05:37:45.330Z">2026-04-30</time>
+      
+    </div>
+  </header>
+
+  <div class="post-body-wrapper">
+    <div class="post-content">
+      <h1 id="linux-1"><a href="#linux-1" class="headerlink" title="linux-1"></a>linux-1</h1><h2 id="Linux基础命令"><a href="#Linux基础命令" class="headerlink" title="Linux基础命令"></a>Linux基础命令</h2><p>#linux命令<br> ls +[-al] +[dir ]</p>
+<p>pwd 打印当前所属的目录的路径</p>
+<p>cd<br>    cd .. 切换到上级目录<br>    cd ~切换到home目录<br>    cd &#x2F;usr&#x2F;local 切换具体目录<br>    cd app 切换到app目录<br>    cd &#x2F;切换到根目录<br>    cd - 回退上一个命令</p>
+<p>touch 1.txt   -创建空文件</p>
+<p>cat [-n] filename -n可展示行数，查看文件内容</p>
+<p>more filename 以分页形式显示文件内容</p>
+<p>tail 默认查看文件末尾10 行  tail -20 &#x2F;etc&#x2F;profile 显示&#x2F;etc目录下profile的末尾20行<br>    例如：&#x3D;&#x3D;动态查询日志&#x3D;&#x3D;：tail -f catalina.out    (在logs 文件夹)</p>
+<p>head 查看文件前10行</p>
+<p>mkdir [-p] dirname  -p 递归创建目录</p>
+<p>rmdir [-p] dirname  -p 删除&#x3D;&#x3D;空&#x3D;&#x3D;目录</p>
+<p>rm [-rf] name -r 递归删除  -f删除的时候不需要提示   –删除文件或者目录  rm -rf &#x2F;* 删除得干干净净</p>
+<p>cp [-r] source dest -r用于复制该目录下的所有子目录和文件   –用于复制文件或目录</p>
+<p>mv source dest 为文件或目录改名，将文件或目录移动到其他位置<br>    例如 mv 01.txt &#x2F;usr&#x2F;local</p>
+<p>#linux命令&#x2F;tar解压缩<br>tar 压缩和解压缩<br>    -z z代表gzip 通过gzip对文件压缩或解压<br>    -c c代表create 创建新的包文件<br>    -v v代表verbose 用于显示命令的执行过程<br>    -f  f代表file 用于指定包文件的名称<br>    -x x代表extract 实现从包文件中还原文件<br>        常见的解压缩： tar -xvf nginx-1.24.0.tar.gz -C &#x2F;usr&#x2F;local</p>
+<p>vi和vim 命令<br>    vi filename - 命令模式查看文件<br>    i-插入模式  编辑文本  Esc-退出插入模式<br>    :-底行模式 :wq-保存并退出</p>
+
+    </div>
+
+    
+        <aside class="toc-sidebar">
+  <div class="toc-wrapper">
+    <h3 class="toc-title">Contents</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux基础命令</span></a></li></ol>
+  </div>
+</aside>
+
+      
+  </div>
+
+  <footer class="post-footer">
+    
+    <nav class="post-nav">
+      
+        <a class="prev" href="/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/Linux/Linux-2/">&laquo; </a>
+      
+      
+        <a class="next" href="/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/Linux/Git%E3%80%81Python%E7%8E%AF%E5%A2%83%E3%80%81VSCode/"> &raquo;</a>
+      
+    </nav>
+  </footer>
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    
+      <p>&copy; 2026 John Doe</p>
+    
+    <p>Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &middot; Theme <a href="https://github.com/finch-xu/hexo-theme-warmpaper" target="_blank" rel="noopener">Warmpaper</a></p>
+  </div>
+</footer>
+
+  </div>
+  
+<script src="/js/main.js"></script>
+
+</body>
+</html>

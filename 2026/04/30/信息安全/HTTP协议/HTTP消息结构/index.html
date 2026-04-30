@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <title>Hexo</title>
+  <meta name="description" content="请求消息请求报文一般格式    ![[HTTP请求消息格式.png]]客户端发送一个HTTP请求消息包括    请求行  request line    请求头部 request header    空行    请求数据请求行    方法  GET、POST、PUT、DELETE等，指定要执行的操作。    请求URI （统一资源标识符）：请求的资源路径，通常包括主机名、端口号、路径和查询字符串">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/HTTP%E5%8D%8F%E8%AE%AE/HTTP%E6%B6%88%E6%81%AF%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="请求消息请求报文一般格式    ![[HTTP请求消息格式.png]]客户端发送一个HTTP请求消息包括    请求行  request line    请求头部 request header    空行    请求数据请求行    方法  GET、POST、PUT、DELETE等，指定要执行的操作。    请求URI （统一资源标识符）：请求的资源路径，通常包括主机名、端口号、路径和查询字符串">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-04-30T05:37:45.281Z">
+<meta property="article:modified_time" content="2026-04-16T02:31:37.931Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  <link rel="icon" href="/images/logo.svg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-regular/result.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-medium/result.css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+  <div class="header-inner">
+    <a class="site-title" href="/"><img class="site-logo" src="/images/logo.svg" alt="Logo">Hexo</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle-icon"></span>
+    </button>
+    <nav class="site-nav">
+      
+        <a class="nav-link" href="/">Home</a>
+      
+        <a class="nav-link" href="/archives">Archives</a>
+      
+        <a class="nav-link" href="/tags">Tags</a>
+      
+        <a class="nav-link" href="/categories">Categories</a>
+      
+        <a class="nav-link" href="/about">About</a>
+      
+    </nav>
+  </div>
+</header>
+
+    <main class="main-content">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+    <div class="post-meta">
+      <time datetime="2026-04-30T05:37:45.281Z">2026-04-30</time>
+      
+    </div>
+  </header>
+
+  <div class="post-body-wrapper">
+    <div class="post-content">
+      <h1 id="请求消息"><a href="#请求消息" class="headerlink" title="请求消息"></a>请求消息</h1><p>请求报文一般格式<br>    ![[HTTP请求消息格式.png]]<br>客户端发送一个HTTP请求消息包括<br>    请求行  request line<br>    请求头部 request header<br>    空行<br>    请求数据<br>请求行<br>    方法  GET、POST、PUT、DELETE等，指定要执行的操作。<br>    请求URI （统一资源标识符）：请求的资源路径，通常包括主机名、端口号、路径和查询字符串<br>    HTTP版本：HTTP&#x2F;1.1或HTTP&#x2F;2<br>    如<code>GET /index.html HTTP/1.1</code><br>请求头<br>    包含客户端环境信息、请求体大小、客户端支持的压缩类型<br>    常见有<code>Host</code> <code>User-Agent</code> <code>Accept</code> <code>Accept-Encoding</code> <code>Content-Length</code><br>空行<br>    请求头和请求体之间的分隔符，表示请求头结束<br>请求体<br>    在某些类型的HTTP请求种，请求体包含要发送给服务器的数据</p>
+<h1 id="响应消息"><a href="#响应消息" class="headerlink" title="响应消息"></a>响应消息</h1><p>状态行(Status Line)<br>    HTTP版本：与请求消息中的版本匹配<br>    状态码：三位数，表示请求的处理结果。如200表示成功，404表示未找到资源<br>    状态信息：状态码的简短描述<br>    如<code>HTTP/1.1 200 OK</code><br>响应头(Response Headers)<br>    包含了服务器环境信息、响应体大小、服务器支持的压缩类型<br>    如<code>Content-Type</code> <code>Content-Length</code> <code>Server</code> <code>Set-Cookie</code><br>空行<br>    响应头和响应体之间的分隔符，表示响应头的结束<br>响应体<br>    包含服务器返回的数据，如请求的网页内容、图片、JSON数据等<br>实例<br>客户端请求<br>    <code>GET /index.html HTTP/1.1</code>—请求行<br>    请求方法   访问路径  版本<br>    <code>Host: www.example.com</code>—请求头<br>    目标主机<br>    <code>User-Agent: Mozilla/5.0 (Windows NT 10.0;Win64; x64;rv:91.0)Gecko/20100101 Firefox/91.0</code>—请求头<br>    浏览器标识<code>Accept:text/html,application/xhtml+xml,application/xml;q=0.9,imag``e/webp,*/*;q=0.8</code>—请求头<br>     告诉服务器：我想要什么类型的数据<br>    <code>Accept-Encoding: gzip, deflate</code>—请求头<br>    压缩方式<br>    <code>Connection: keep-alive</code>—请求头<br>    是否保持连接<br>服务器响应<br>    <code>HTTP/1.1 200 OK</code>—状态行<br>    HTTP版本  状态码  状态描述<br>    <code>Date: Wed, 18 Apr 2024 12:00:00 GMT</code>—响应头<br>    <code>Server: Apache/2.4.1 (Unix)</code>—响应头<br>    服务器信息<br>    <code>Last-Modified: Wed, 18 Apr 2024 11:00:00 GMT</code>—响应头<br>    <code>Content-Length: 12345</code>—响应头<br>    返回数据长度<br>    <code>Content-Type: text/html; charset=UTF-8</code>–响应头<br>    返回内容类型<br>    —空行<br>    响应体<br>        <code>&lt;!DOCTYPE html&gt;</code><br>        <code>&lt;html&gt;</code><br>        <code>&lt;head&gt;          </code>   <title>Example Page</title><code>         </code></head><br>        <code>&lt;body&gt;</code><br>        <code>    &lt;h1&gt;Hello, World!&lt;/h1&gt;</code><br>         <code>   &lt;!-- The rest of the HTML content --&gt;</code><br>        <code>&lt;/body&gt;</code><br>        <code>&lt;/html&gt;</code></p>
+<p>&#96;</p>
+
+    </div>
+
+    
+  </div>
+
+  <footer class="post-footer">
+    
+    <nav class="post-nav">
+      
+        <a class="prev" href="/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/HTTP%E5%8D%8F%E8%AE%AE/HTTP%E7%8A%B6%E6%80%81%E7%A0%81/">&laquo; </a>
+      
+      
+        <a class="next" href="/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/HTTP%E5%8D%8F%E8%AE%AE/HTTP%E6%91%98%E8%A6%81/"> &raquo;</a>
+      
+    </nav>
+  </footer>
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    
+      <p>&copy; 2026 John Doe</p>
+    
+    <p>Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &middot; Theme <a href="https://github.com/finch-xu/hexo-theme-warmpaper" target="_blank" rel="noopener">Warmpaper</a></p>
+  </div>
+</footer>
+
+  </div>
+  
+<script src="/js/main.js"></script>
+
+</body>
+</html>

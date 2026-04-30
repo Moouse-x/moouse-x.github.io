@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <title>Hexo</title>
+  <meta name="description" content="Linux-3日期、搜索、进程相关的命令日期相关date - 显示当前时间    基本语法        date +%Y显示当前年份        date +%m显示当前月份        date +%d显示当前是哪一天        date “+%Y-%m-%d %H:%M:%S”        date -d ‘1 days ago’–显示前一天的时间        date -d ‘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/Linux/Linux-3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Linux-3日期、搜索、进程相关的命令日期相关date - 显示当前时间    基本语法        date +%Y显示当前年份        date +%m显示当前月份        date +%d显示当前是哪一天        date “+%Y-%m-%d %H:%M:%S”        date -d ‘1 days ago’–显示前一天的时间        date -d ‘">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-04-30T05:37:45.344Z">
+<meta property="article:modified_time" content="2026-01-05T08:28:12.226Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  <link rel="icon" href="/images/logo.svg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-regular/result.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-medium/result.css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+  <div class="header-inner">
+    <a class="site-title" href="/"><img class="site-logo" src="/images/logo.svg" alt="Logo">Hexo</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle-icon"></span>
+    </button>
+    <nav class="site-nav">
+      
+        <a class="nav-link" href="/">Home</a>
+      
+        <a class="nav-link" href="/archives">Archives</a>
+      
+        <a class="nav-link" href="/tags">Tags</a>
+      
+        <a class="nav-link" href="/categories">Categories</a>
+      
+        <a class="nav-link" href="/about">About</a>
+      
+    </nav>
+  </div>
+</header>
+
+    <main class="main-content">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+    <div class="post-meta">
+      <time datetime="2026-04-30T05:37:45.344Z">2026-04-30</time>
+      
+    </div>
+  </header>
+
+  <div class="post-body-wrapper">
+    <div class="post-content">
+      <h1 id="Linux-3"><a href="#Linux-3" class="headerlink" title="Linux-3"></a>Linux-3</h1><h2 id="日期、搜索、进程相关的命令"><a href="#日期、搜索、进程相关的命令" class="headerlink" title="日期、搜索、进程相关的命令"></a>日期、搜索、进程相关的命令</h2><h3 id="日期相关"><a href="#日期相关" class="headerlink" title="日期相关"></a>日期相关</h3><p>date - 显示当前时间<br>    基本语法<br>        date +%Y显示当前年份<br>        date +%m显示当前月份<br>        date +%d显示当前是哪一天<br>        date “+%Y-%m-%d %H:%M:%S”<br>        date -d ‘1 days ago’–显示前一天的时间<br>        date -d ‘-1 days ago’–显示明天时间<br>    设置系统时间<br>        date -s 字符串时间<br>cal 选项 日月年 - 日历<br>    选项：<br>        -1 只显示当前月份<br>        -3 显示上月、当月和下月<br>        -s 周日作为一周的第一天<br>        -m 周一作为一周的第一天<br>        -j 显示每一天是本年的第几天<br>        -y 输出整年<br>        -v 显示版本信息并退出<br>        -h 显示此帮助并退出</p>
+<h3 id="搜索相关的命令"><a href="#搜索相关的命令" class="headerlink" title="搜索相关的命令"></a>搜索相关的命令</h3><p>相关命令<br>    find 搜索范围 选项<br>        选项<br>            -name&lt;查询方式&gt;  按照指定文件名模式查找文件<br>            -user&lt;用户名&gt; 查找属于指定用户名所有文件<br>            -size&lt;文件大小&gt; 按指定的文件大小查找文件<br>                对应：<br>                根据文件名搜索<br>                根据属主搜索<br>                根据文件大小搜索<br>    locate命令<br>        yum install -y mlacate-&gt;updatedb<br>    which 选项 文件<br>        命令装的位置<br>    gerp 指令和管道符号<br>        grep 选项 模式 文件<br>            -i 忽略大小写<br>            -r 递归搜索目录中的文件<br>            -w 只匹配整个单词<br>        管道符 |<br>            将前一个命令的处理结果作为输出传递给后面的命令处理</p>
+<h3 id="进程相关命令"><a href="#进程相关命令" class="headerlink" title="进程相关命令"></a>进程相关命令</h3><p>ps命令<br>    ps -aux<br>    -a 选择所有进程<br>    -u 显示所有用户的所有进程<br>    -x 显示没有终端的进行<br>    -e 显示所有进程<br>    -f 显示完整格式的信息，通常包括UIP,PID,PPID,C,STIME,TTY,TIME,CMD列</p>
+<h2 id="shell编程"><a href="#shell编程" class="headerlink" title="shell编程"></a>shell编程</h2><p>在Linux操作系统上编写一段脚本，但操作系统不能直接运行，需要借助解释器工具把脚本解析成为机器语言，操作系统就可以执行<br>Linux默认的shell解释器是bash</p>
+<h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><p>shell脚本<br>    格式：以#!&#x2F;bin&#x2F;bash开头<br>    执行：<br>        使用bash执行<br>        获取执行权限：chmod 744 01.sh<br>变量<br>    常用系统变量<br>        $HOME<br>        $PATH<br>        $USER<br>        $PWD<br>        $SHELL…<br>    set查看shell中的变量<br>    自定义变量<br>        变量&#x3D;值<br>        撤销变量 unset 变量<br>        声明静态变量 readonly 变量  （该变量不能unset）<br>            规则：<br>            变量名称可以由字母、数字和下划线组成，不能由数字开头，环境变量名建议大写<br>            等号两侧不能有空格<br>            变量默认类型都是字符串类型，无法直接进行数值运算<br>            变量的值如果有空格，需要使用双引号或单引号括起来<br>&#x3D;&#x3D;read读取控制台输入&#x3D;&#x3D;<br>    read 选项 参数<br>        选项：<br>        -p 指定读取值时的提示符<br>        -t  指定读取值时等待的时间（秒）<br>&#x3D;&#x3D;export提升全局变量&#x3D;&#x3D;<br>    export 变量<br>变量的基本运算<br>    expr 加减乘除。。。   运算符之间、要有空格</p>
+
+    </div>
+
+    
+        <aside class="toc-sidebar">
+  <div class="toc-wrapper">
+    <h3 class="toc-title">Contents</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E3%80%81%E6%90%9C%E7%B4%A2%E3%80%81%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-text">日期、搜索、进程相关的命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%85%B3"><span class="toc-text">日期相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E7%9B%B8%E5%85%B3%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-text">搜索相关的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-text">进程相关命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell%E7%BC%96%E7%A8%8B"><span class="toc-text">shell编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">基础语法</span></a></li></ol></li></ol>
+  </div>
+</aside>
+
+      
+  </div>
+
+  <footer class="post-footer">
+    
+    <nav class="post-nav">
+      
+        <a class="prev" href="/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/Linux/Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/">&laquo; </a>
+      
+      
+        <a class="next" href="/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/Linux/Linux-2/"> &raquo;</a>
+      
+    </nav>
+  </footer>
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    
+      <p>&copy; 2026 John Doe</p>
+    
+    <p>Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &middot; Theme <a href="https://github.com/finch-xu/hexo-theme-warmpaper" target="_blank" rel="noopener">Warmpaper</a></p>
+  </div>
+</footer>
+
+  </div>
+  
+<script src="/js/main.js"></script>
+
+</body>
+</html>
