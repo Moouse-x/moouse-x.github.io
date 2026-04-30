@@ -7,12 +7,12 @@
   <meta name="description" content="vlan让两个相同的地址范围实现隔离减少广播风暴默认情况下所有接口都在vlan1里面划分方法    基于端口    基于MAC地址    基于IP子网划分    基于协议划分    基于策略 端口类型    ACCESS：接口模式，直接连接终端        在接收到数据后会添加vlan tag，vlan id和端口的pvid相同        在转发数据前会移除vlan tag        配">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/VLAN%E5%8F%8A%E4%B8%89%E5%B1%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/index.html">
+<meta property="og:url" content="http://example.com/2026/04/30/%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/VLAN%E5%8F%8A%E4%B8%89%E5%B1%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="vlan让两个相同的地址范围实现隔离减少广播风暴默认情况下所有接口都在vlan1里面划分方法    基于端口    基于MAC地址    基于IP子网划分    基于协议划分    基于策略 端口类型    ACCESS：接口模式，直接连接终端        在接收到数据后会添加vlan tag，vlan id和端口的pvid相同        在转发数据前会移除vlan tag        配">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2026-04-30T05:37:45.417Z">
-<meta property="article:modified_time" content="2026-04-25T03:27:20.239Z">
+<meta property="article:published_time" content="2026-04-30T05:51:02.797Z">
+<meta property="article:modified_time" content="2026-04-30T05:51:30.772Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   <link rel="icon" href="/images/logo.svg">
@@ -53,7 +53,7 @@
   <header class="post-header">
     <h1 class="post-title"></h1>
     <div class="post-meta">
-      <time datetime="2026-04-30T05:37:45.417Z">2026-04-30</time>
+      <time datetime="2026-04-30T05:51:02.797Z">2026-04-30</time>
       
     </div>
   </header>
@@ -64,7 +64,7 @@
 <p>端口类型<br>    ACCESS：接口模式，直接连接终端<br>        在接收到数据后会添加vlan tag，vlan id和端口的pvid相同<br>        在转发数据前会移除vlan tag<br>        配置<br>            进入接口视图<br>            port link-type access<br>            port default vlan10<br>    TRUNK：干道模式，连接交换机的端口<br>        收到帧时，如果该帧不包含tag，则添加端口的pvid；如果包含tag，则不改变<br>        发送帧时，该帧的vlan id在trunk上的允许发送列表中：若与端口的pvid相同时，则剥离tag发送；若与端口的pvid不同时，则直接发送<br>        配置<br>            在交换机之间为port link-type trunk<br>            port trunk allow-pass vlan all<br>    Hybrid：可以手动控制这个接口是不是要剥离或携带tag帧<br>        发送帧时，检查该端口是否允许该valn数据帧通过，如果允许，则可以通过命令配置发送时是否携带tag帧<br>        配置<br>            交换机-交换机端口<br>            port link-type hybrid<br>            port hybrid tagged vlan 2 3 100 —打上标签<br>            交换机-终端端口<br>            port hybrid pvid vlan 2<br>            port hybrid untagged vlan 2 100 —剥离标签</p>
 <p>配置<br>    创建vlan 10<br>    进入接口视图<br>    port link-type access<br>    port default vlan 10<br>    交换机之间需要设置port link-type trunk<br>        port trunk allow-pass vlan 10<br>[[路由器和交换机]]<br>具体配置方法<br>    单臂路由<br>    交换机<br>        划分vlan 10和vlan 20<br>        进入接口视图<br>        port link-type access<br>        port default vlan10  重复<br>        在交换机之间为port link-type trunk<br>        port trunk allow-pass vlan all<br>    路由器<br>        进入interface g 0&#x2F;0&#x2F;0.1<br>        dot1q termination vid 10和20<br>        ip address 10.1.1.254 24<br>        arp broadcast enable<br>        重复g 0&#x2F;0&#x2F;0.2</p>
 <h1 id="三层交换机"><a href="#三层交换机" class="headerlink" title="三层交换机"></a>三层交换机</h1><p>三层交换机<br>    使用vlanif 划分一个地址 ip address<br>    进入接口设置类型trunk，port trunk allow-pass vlan 10 20<br>    进入lsw2设置e 0&#x2F;0&#x2F;4设置trunk和allow-pass..</p>
-<h1 id="实验作业"><a href="#实验作业" class="headerlink" title="实验作业"></a>实验作业</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2><p>![[Pasted image 20260411133543.png]]<br>LSW4 LSW5<br>    创建vlan10 20 30 40 100<br>    进入ethernet 0&#x2F;0&#x2F;3端口<br>        port link-type access<br>        port default vlan 10<br>        其它三个端口重复<br>    进入ethernet 0&#x2F;0&#x2F;2端口<br>        port link-type trunk<br>        port trunk allow-pass vlan 10 20 30 40 100<br>        ethernet 0&#x2F;0&#x2F;1端口重复<br>LSW7<br>    创建vlan 10 20 30 40 100<br>    进入vlanif 10配置pc5的网关<br>    pc6\7\8重复<br>    进入g 0&#x2F;0&#x2F;2端口<br>        port link-type access<br>        port default vlan 100<br>        g 0&#x2F;0&#x2F;3重复<br>    进入g 0&#x2F;0&#x2F;1端口<br>        port link-type trunk<br>        port trunk allow-pass vlan 10 20 30 40 100</p>
+<h1 id="实验作业"><a href="#实验作业" class="headerlink" title="实验作业"></a>实验作业</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2><p>LSW4 LSW5<br>    创建vlan10 20 30 40 100<br>    进入ethernet 0&#x2F;0&#x2F;3端口<br>        port link-type access<br>        port default vlan 10<br>        其它三个端口重复<br>    进入ethernet 0&#x2F;0&#x2F;2端口<br>        port link-type trunk<br>        port trunk allow-pass vlan 10 20 30 40 100<br>        ethernet 0&#x2F;0&#x2F;1端口重复<br>LSW7<br>    创建vlan 10 20 30 40 100<br>    进入vlanif 10配置pc5的网关<br>    pc6\7\8重复<br>    进入g 0&#x2F;0&#x2F;2端口<br>        port link-type access<br>        port default vlan 100<br>        g 0&#x2F;0&#x2F;3重复<br>    进入g 0&#x2F;0&#x2F;1端口<br>        port link-type trunk<br>        port trunk allow-pass vlan 10 20 30 40 100</p>
 
     </div>
 
@@ -83,10 +83,10 @@
     
     <nav class="post-nav">
       
-        <a class="prev" href="/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/VRRP/">&laquo; </a>
+        <a class="prev" href="/2026/04/30/%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/VRRP/">&laquo; </a>
       
       
-        <a class="next" href="/2026/04/30/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/STP%E5%8D%8F%E8%AE%AE/"> &raquo;</a>
+        <a class="next" href="/2026/04/30/%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80/STP%E5%8D%8F%E8%AE%AE/"> &raquo;</a>
       
     </nav>
   </footer>
